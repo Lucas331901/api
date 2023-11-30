@@ -1,5 +1,8 @@
 {
-  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+},
+
   "dependencies": {
     "jsonwebtoken": "^9.0.2"
   }
