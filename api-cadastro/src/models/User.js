@@ -1,5 +1,4 @@
 const mongoose = require("../database");
-const TelephoneSchema = require('../db/TelephoneSchema');
 
 const bcryptjs = require('bcryptjs');
 
@@ -20,7 +19,7 @@ const UserSchema = new mongoose.Schema({
         select: false,
     },
     telefones: {
-        type: [TelephoneSchema],
+        type: String,
         required: true,
     },
     createdAt: {
