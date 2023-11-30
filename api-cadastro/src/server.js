@@ -16,3 +16,4 @@ app.use("/admin", authenticateMiddleware, AdminController);
 app.listen(3001, ()=>{
     console.log('Server is running');
 });
+//
