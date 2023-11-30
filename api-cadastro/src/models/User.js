@@ -19,10 +19,6 @@ const UserSchema = new mongoose.Schema({
         required: true,
         select: false,
     },
-    telefones: {
-        type: [TelephoneSchema],
-        required: true,
-    },
     createdAt: {
         type: Date,
         default: Date.now
