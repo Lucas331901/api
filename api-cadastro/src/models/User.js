@@ -1,5 +1,4 @@
 const mongoose = require("../database");
-const TelephoneSchema = require('../db/TelephoneSchema');
 
 const bcryptjs = require('bcryptjs');
 
@@ -13,6 +12,9 @@ const UserSchema = new mongoose.Schema({
         required: true,
         unique: true,
         lowercase:  true,
+    },
+    telefone: {
+        type: String,
     },
     senha: {
         type: String,
