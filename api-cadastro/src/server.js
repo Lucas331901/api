@@ -15,6 +15,10 @@ app.use(express.json());
 app.use("/auth", AuthController);
 app.use("/admin", authenticateMiddleware, AdminController);
 
+app.get('/', (req, res) => {
+  res.status(200).json({ mensagem: 'Bem-vindo à API!' });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
