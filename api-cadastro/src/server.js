@@ -10,12 +10,14 @@ const authenticateMiddleware = require("./middlewares/authenticate");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-
 app.use(express.json());
 
 app.use("/auth", AuthController);
 app.use("/admin", authenticateMiddleware, AdminController);
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+
+
 
